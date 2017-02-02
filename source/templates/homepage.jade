@@ -1,0 +1,61 @@
+extend default
+
+block content
+    if vehicleData
+        table
+            thead
+                tr
+                    th Time of Data
+                    th Time of Request
+                    th Last State
+                    th SoC Percent
+                    th SoC KWh
+                    th Max KWh
+                    th Range
+                    th Charge Time
+                    th KM
+                    th Consumption
+                    th Charging Speed
+            tbody
+                each item in vehicleData
+                    tr
+                        //canvas(id="myChart", width="400", height="400")
+                        td=item.timeText
+                        td=item.timeOfRequest
+                        td=item.lastUpdateReason
+                        td=item.socPercent
+                        td=item.soc
+                        td=item.socMax
+                        td=item.remainingRange
+                        td=item.chargeTimeRemaining
+                        td=item.km
+                        td=item.consumption
+                        td=item.chargeRate
+                    //script.
+                    //    $(document).ready(function () {
+                    //        var ctx = document.getElementById("myChart");
+                    //        var myChart = new Chart(ctx, {
+                    //            type: 'bar',
+                    //            data: {
+                    //                labels: ['Item 1', 'Item 2', 'Item 3'],
+                    //                datasets: [
+                    //                    {
+                    //                        type: 'bar',
+                    //                        label: 'Consumption kWh/100km',
+                    //                        data: [0, 13, 15]
+                    //                    },
+                    //                    {
+                    //                        type: 'bar',
+                    //                        label: 'Charge Rate',
+                    //                        data: [0, 0, 0]
+                    //                    },
+                    //                    {
+                    //                        type: 'line',
+                    //                        label: 'Battery SOC',
+                    //                        data: [100, 98, 95]
+                    //                    }
+                    //                ]
+                    //            }
+                    //        });
+                    //    });
+            //

@@ -1,0 +1,14 @@
+tested with node.js 6.9.4 LTS
+
+to install dependencies:
+npm install
+
+to run:
+npm start
+
+reachable at:
+http://localhost:3000/
+
+use "forever" to run as a service in background:
+sudo npm install forever -g
+forever start -a -l forever.log -o out.log -e err.log server.js
